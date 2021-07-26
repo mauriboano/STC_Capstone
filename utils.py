@@ -36,6 +36,19 @@ def download_image(path, datadir = '/content/drive/MyDrive/MAXAR/', time = 'pre'
             if block: 
                 file.write(block)
             
+def plot_image(path):
+    """
+    This function is useful for plotting large .geotiffs
+    NOTE: function plots a single band of data so colors will be off
+    Useful for getting scale of the satellite image available when it cannot be opened by typical image processors
+    """
+    
+    dataset = gdal.OpenEx(path, gdal.GA_ReadOnly) 
+    # Note GetRasterBand() takes band no. starting from 1 not 0
+    band = dataset.GetRasterBand(1)
+    arr = band.ReadAsArray()
+    plt.imshow(arr)
+    
 #function to check overlap between images
 def overlap_check(post_path, pre_path):
     
