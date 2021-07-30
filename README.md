@@ -1,3 +1,4 @@
+![figure_1](https://user-images.githubusercontent.com/87451510/127698224-baefebd5-99b6-452e-af89-b235c0bca5eb.png)
 # Final Project Repository for the UVA School of Data Science Summer 2021 Save the Children Capstone Project
 
 ## Abstract
