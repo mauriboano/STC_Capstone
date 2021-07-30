@@ -72,11 +72,7 @@ The model is actually an ensemble of four different deep learning algorithms, ea
 
 Below is an example of pre- and post-disaster images that were run through the model, followed by the damage classification output image.
 
-<img src="https://user-images.githubusercontent.com/87451510/127699836-146fd35d-603c-4292-879f-fab570df8e2f.png" width="600">
-     
-<img src="https://user-images.githubusercontent.com/87451510/127699847-db136c61-0683-42e4-97b3-5b4239da1ad9.png" width="600">
-
-<img src="https://user-images.githubusercontent.com/87451510/127699071-d8c60f02-7ccb-43f8-b282-197fbeeebd00.png" width="600">
+<img src="https://user-images.githubusercontent.com/87451510/127699836-146fd35d-603c-4292-879f-fab570df8e2f.png" width="300"> <img src="https://user-images.githubusercontent.com/87451510/127699847-db136c61-0683-42e4-97b3-5b4239da1ad9.png" width="300"> <img src="https://user-images.githubusercontent.com/87451510/127699071-d8c60f02-7ccb-43f8-b282-197fbeeebd00.png" width="300">
 
 
 
