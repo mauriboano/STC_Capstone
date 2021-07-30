@@ -42,4 +42,11 @@ In this stage, you will execute code to run the predictive model on the preproce
 #### Prepare the Model
 There are two versions of the predictive model included in this repo - one that uses CPUs for processing, and one that uses GPUs. We created a CPU version for testing due to the high cost and limited availability of GPUs. In a production environment, the GPU version will be required due to the large volume of image data that will need to be included. Besides code that is included in the GPU version to take advantage of GPU processing, the two versions are identical. The instructions below are focused on the CPU version, but the same will apply for the GPU version.
 * Clone this repository to your local drive
-* 
+* Copy the 'durnov_model_cpu_version' folder and its contents to your working directory
+* Download trained model weights from the source (https://vdurnov.s3.amazonaws.com/xview2_1st_weights.zip)
+  * Extract the weight files to the ‘weights’ subdirectory (these are large files)
+* There are eight sample image pairs already included in the 'test/images' subdirectory. If using new images pairs, place both the pre- and post-disaster images in the 'test/images' subdirectory
+  * Each image pair takes approximately 15-20 minutes to run in the CPU version, so plan accordingly
+  * File names should be in this format (what's important is the sequence number and the indication of pre- and post-disaster):
+    * guatemala-volcano_00000003_pre_disaster
+    * guatemala-volcano_00000003_post_disaster
