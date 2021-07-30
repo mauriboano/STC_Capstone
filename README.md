@@ -74,5 +74,6 @@ Below is an example of pre- and post-disaster images that were run through the m
 
 <img src="https://user-images.githubusercontent.com/87451510/127699836-146fd35d-603c-4292-879f-fab570df8e2f.png" height="310"> <img src="https://user-images.githubusercontent.com/87451510/127699847-db136c61-0683-42e4-97b3-5b4239da1ad9.png" height="310"> <img src="https://user-images.githubusercontent.com/87451510/127699071-d8c60f02-7ccb-43f8-b282-197fbeeebd00.png" height="310">
 
-
+## Acknowledgments
+We thank the following people for their help and support: UVA Professor Jon Kropko for his thoughtful guidance and direction through the capstone process; UVA Professor Bill Baesner for serving as a liaison between Save the Children and Maxar; Will Low from Save the Children International for his humanitarian vision, knowledge, and guidance; and Maxar for being eager partners and data providers.
 
