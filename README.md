@@ -13,6 +13,8 @@ With two exceptions, the files that are required to perform the actions above ar
 1. Trained model weights must be downloaded separately. Due to their large size, they are not included in this repo, but can be found at this link: https://vdurnov.s3.amazonaws.com/xview2_1st_weights.zip
 2. Only a few sample input image pairs are included in this repo for demonstration purposes. New images will need to be obtained from either the xView2 Challenge website (https://www.xview2.org/dataset), or a geotiff provider such as Maxar (https://www.maxar.com/open-data)
 
+The deep learning models provided in this repository are based on the xView2 Challenge first-place model developed by Victor Durnov in 2020 (https://github.com/vdurnov/xview2_1st_place_solution). The focus of this project is to deploy a working version of that model for Save the Children.
+
 ## How to Run the Model
 The steps below describe how to use the files and code in this repository. There are two main sections: Preprocess satellite images in geotiff format, and Run preprocessed images through a pretrained neural network. There are no dependencies between these steps - you can run the model without preprocessing the images (albeit on a small set of sample images), and you can preprocess geotiff images without any need to run the output through the prediction model.
 
@@ -32,4 +34,12 @@ WRITE ABOUT THIS UTILITY
   * At this point you can run `create_kml` and follow the onscreen instructions to plot these available polygons in an interactive Google Map
 * Next, either run the `crop_images_iter` or `crop_images_rand` function to split any overlapping area between two images into smaller sized images that the model is able to read (480px by 480px).
   * The difference between these two functions is that `crop_images_iter` will loop over the entire overlapping area and provide as many smaller sized images as possible, while `crop_images_rand` will output a single random smaller sized image located within the overlapping range. We recommend `crop_images_iter` for production environments where completeness is crucial and `crop_images_rand` for general testing
+* HOW AND WHERE ARE THESE IMAGES NOW SAVED?
 
+### Run Preprocessed Images Through a Pretrained Neural Network
+In this stage, you will execute code to run the predictive model on the preprocessed images that you obtained in the steps above. The result of this is a pair of images that show building localization (highlighting the structures in the pre-disaster image), and damage classification (which buildings are damaged, and what's the level of damage).
+
+#### Prepare the Model
+There are two versions of the predictive model included in this repo - one that uses CPUs for processing, and one that uses GPUs. We created a CPU version for testing due to the high cost and limited availability of GPUs. In a production environment, the GPU version will be required due to the large volume of image data that will need to be included. Besides code that is included in the GPU version to take advantage of GPU processing, the two versions are identical. The instructions below are focused on the CPU version, but the same will apply for the GPU version.
+* Clone this repository to your local drive
+* 
