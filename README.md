@@ -1,5 +1,9 @@
-![figure_1](https://user-images.githubusercontent.com/87451510/127698224-baefebd5-99b6-452e-af89-b235c0bca5eb.png)
 # Final Project Repository for the UVA School of Data Science Summer 2021 Save the Children Capstone Project
+#### Sam Tyree (jst6jz@virginia.edu)
+#### Maurizio Boano (mb6fs@virginia.edu)
+#### Anvar Sarbanov (as5da@virginia.edu)
+#### Travis Moore (trm2yf@virginia.edu)
+
 
 ## Abstract
 The researchers conducted a review of existing machine learning methods to detect infrastructure damage using satellite imagery and neural networks. The research sponsor, Save the Children, seeks to leverage such detection methods to identify areas of likely human displacement following disaster events, and deploy humanitarian assistance quickly and efficiently. Several algorithmic methods were examined, and it was determined that a deep learning solution using a Siamese Neural Network was superior for infrastructure damage detection. The researchers also developed a data preprocessing pipeline to source satellite imagery from a leading satellite operator, followed by performing image analysis and further processing to predict using appropriate data.
@@ -60,4 +64,18 @@ Now that the model has been prepared following the steps above, you will execute
 * When complete, you will receive the message ‘submission created!’
 * There will be two new image files in a new directory called ‘submission’. These are the localization and damage prediction files that are model outputs
 
-#### Interpreting Model Results
+#### Interpret Model Results
+The model is actually an ensemble of four different deep learning algorithms, each with three seeds. At the end, the model will determine which model output has the best precision, and those localization and damage classification images will be placed in the 'submission' directory. The model will identify four levels of damage in the damage classification output image using color coding.
+
+<img src="https://user-images.githubusercontent.com/87451510/127698919-3ffabf87-778a-4384-8764-fe37453994f3.png" width="600">
+
+Below is an example of pre- and post-disaster images that were run through the model, followed by the damage classification output image.
+
+<img src="https://user-images.githubusercontent.com/87451510/127699836-146fd35d-603c-4292-879f-fab570df8e2f.png" width="600">
+     
+<img src="https://user-images.githubusercontent.com/87451510/127699847-db136c61-0683-42e4-97b3-5b4239da1ad9.png" width="600">
+
+<img src="https://user-images.githubusercontent.com/87451510/127699071-d8c60f02-7ccb-43f8-b282-197fbeeebd00.png" width="600">
+
+
+
