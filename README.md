@@ -1,8 +1,9 @@
 # Final Project Repository for the UVA School of Data Science Summer 2021 Save the Children Capstone Project
-#### Sam Tyree (jst6jz@virginia.edu)
-#### Maurizio Boano (mb6fs@virginia.edu)
-#### Anvar Sarbanov (as5da@virginia.edu)
-#### Travis Moore (trm2yf@virginia.edu)
+#### Project Team (University of Virginia MSDS candidates, graduating August 2021)
+* Sam Tyree (jst6jz@virginia.edu)
+* Maurizio Boano (mb6fs@virginia.edu)
+* Anvar Sarbanov (as5da@virginia.edu)
+* Travis Moore (trm2yf@virginia.edu)
 
 
 ## Abstract
