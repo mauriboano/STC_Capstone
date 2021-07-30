@@ -1,0 +1,1 @@
+### This is the CPU version of the Durnov model, designed to run in an environment with CPU processing capability, when GPUs are not available. This version will take longer to run than the GPU version, but does not require GPUs that are expensive and not always available.
