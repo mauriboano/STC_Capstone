@@ -58,7 +58,7 @@ There are two versions of the predictive model included in this repo - one that 
     * guatemala-volcano_00000003_post_disaster
 
 #### Run the Model
-Now that the model has been prepared following the steps above, you will execute the code to create building localization and damage classification image outputs. There is a bash script file that is in the main working directory, called ‘predict.sh’. This script contains all the instructions to execute the model, running the prediction .py files in the correct order and placing the model outputs in a new directory called 'submission'.
+Now that the model has been prepared following the steps above, you will execute the code to create building localization and damage classification image outputs. There is a bash script file that is in the main working directory, called ‘predict.sh’. This script contains all the instructions to execute the model, running the prediction.py files in the correct order and placing the model outputs in a new directory called 'submission'.
 * Open a terminal window and change (cd) to the main project working directory where the 'predict.sh' bash script is located
 * Type ‘bash predict.sh’ at the command prompt and the model run will begin
   * Be patient - one pair of before/after images takes 15-20 minutes to run with CPUs
