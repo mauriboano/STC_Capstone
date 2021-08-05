@@ -30,7 +30,7 @@ There are two reasons that satellite images may need to be preprocessed before t
 2. Geotiffs from providers like Maxar are not only in .tif format, they also are not cleaned and formatted as overlapping pre- and post-disaster images. The pre- and post-disaster images that they provide may have areas of overlap, and those areas need to be identified so the images can be cropped and positioned. Included in the repository is a util.py file that performs these actions on a set of images that the user provides.
 
 #### Convert .tif Images to .png Format
-This repository includes a notebook utility called 'tifToPng.ipynb' for converting images from .tif to .png format. It does this by recursively copying all .tif files from the root source folder, converting them in a batch into .png files within the destination root folder, while maintaining folder naming and structure. Additional information is contained as comments in the code.
+This repository includes a notebook utility called 'tifToPng.ipynb' for converting images from .tif to .png format. This would be used in scenario 1 above, such as when using xView2 images with the model. It works this by recursively copying all .tif files from the root source folder, converting them in a batch into .png files within the destination root folder, while maintaining folder naming and structure. Additional information is contained as comments in the code.
 
 #### Preprocess Geotiff Images
 * After importing the utils.py module from this repository, you can run the `test` function to confirm it is properly loaded.
