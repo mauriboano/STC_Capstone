@@ -26,11 +26,11 @@ The steps below describe how to use the files and code in this repository. There
 
 ### Preprocess Satellite Images in Geotiff Format
 There are two reasons that satellite images may need to be preprocessed before they can be run through the predictive model.
-1. The model expects images in .png format, so files in .tif format will first need to be converted. If the pre- and post-disater images are already sized and positioned (as they are in the xView2 dataset), the need to still be run through a utility to convert the file type to .png. A utility called XXXX.py has been provided to perform this function, if needed.
+1. The model expects images in .png format, so files in .tif format will first need to be converted. If the pre- and post-disater images are already sized and positioned (as they are in the xView2 dataset), the need to still be run through a utility to convert the file type to .png. A notebook called tifToPng.ipynb has been provided to perform this function, if needed.
 2. Geotiffs from providers like Maxar are not only in .tif format, they also are not cleaned and formatted as overlapping pre- and post-disaster images. The pre- and post-disaster images that they provide may have areas of overlap, and those areas need to be identified so the images can be cropped and positioned. Included in the repo is a util.py file that performs these actions on a set of images that the user provides.
 
-#### Convert .tif Images to .png Format
-WRITE ABOUT THIS UTILITY
+#### Convert .tif Images to .png Format - tifToPng.ipynb 
+Sample notebook for coversion of geotiffs into png format. Recursively copies all tifs from the root source folder into pngs withing the destination root folder while maintaining folder naming and structure.
 
 #### Preprocess Geotiff Images
 * After importing the utils.py module from this repository, you can run the `test` function to confirm it is properly loaded.
@@ -73,6 +73,9 @@ The model is actually an ensemble of four different deep learning algorithms, ea
 Below is an example of pre- and post-disaster images that were run through the model, followed by the damage classification output image.
 
 <img src="https://user-images.githubusercontent.com/87451510/127699836-146fd35d-603c-4292-879f-fab570df8e2f.png" height="310"> <img src="https://user-images.githubusercontent.com/87451510/127699847-db136c61-0683-42e4-97b3-5b4239da1ad9.png" height="310"> <img src="https://user-images.githubusercontent.com/87451510/127699071-d8c60f02-7ccb-43f8-b282-197fbeeebd00.png" height="310">
+
+## Additional Resources
+The notebook, Siamese_deep_learning_for_satellite_image_processing.ipynb, provides a more straightfoward example pipeline implententaion of a Siamese Neural Network using the Xview2 dataset. It does not use model ensembles or fine tuning and is thus a good starting point for understanding. Limited resources in Kaggle and Google Colab limit the ability to train a Siamese network with these images. By using only 300 train, and 50 test images we can run this notebook in Kaggle and Colab and in a reasonable timeframe. This is a modified version of the github/kaggle user Bloodaxe's workshop demostrating the effectiveness of Siamese neural networks for this problem. Bloodaxe took third place in the Xview2 challenge. All of the challenge winners, including Bloodaxe, leveraged Siamese networks in their solution.
 
 ## Acknowledgments
 We thank the following people for their help and support: UVA Professor Jon Kropko for his thoughtful guidance and direction through the capstone process; UVA Professor Bill Baesner for serving as a liaison between Save the Children and Maxar; Will Low from Save the Children International for his humanitarian vision, knowledge, and guidance; and Maxar for being eager partners and data providers.
