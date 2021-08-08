@@ -40,7 +40,6 @@ This repository includes a notebook utility called 'tifToPng.ipynb' for converti
   * At this point you can run `create_kml` and follow the onscreen instructions to plot these available polygons in an interactive Google Map
 * Next, either run the `crop_images_iter` or `crop_images_rand` function to split any overlapping area between two images into smaller sized images that the model is able to read (480px by 480px).
   * The difference between these two functions is that `crop_images_iter` will loop over the entire overlapping area and provide as many smaller sized images as possible, while `crop_images_rand` will output a single random smaller sized image located within the overlapping range. We recommend `crop_images_iter` for production environments where completeness is crucial and `crop_images_rand` for general testing
-* HOW AND WHERE ARE THESE IMAGES NOW SAVED?
 
 ### Run Preprocessed Images Through a Pretrained Neural Network
 In this stage, you will execute code to run the predictive model on the preprocessed images that you obtained in the steps above. The result of this is a pair of images that show building localization (highlighting the structures in the pre-disaster image), and damage classification (which buildings are damaged, and what's the level of damage).
